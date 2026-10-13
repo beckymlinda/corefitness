@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register Now | Core Fitness Lilongwe</title>
+  <meta name="description" content="Register for Core Fitness in Sector 5, Lilongwe. Choose your plan and a coach will welcome you on your first day." />
+  <meta name="theme-color" content="#070707" />
+  <link rel="icon" href="assets/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=Michroma&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="brand" aria-label="Core Fitness home"><img src="assets/logo.png" alt="Core Fitness" width="367" height="294" /></a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="classes.html">Classes</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-cta">
+        <a href="pricing.html" class="btn btn-ghost">View Plans</a>
+        <a href="register.html" class="btn btn-primary">Register Now</a>
+        <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <div class="mobile-nav" aria-label="Mobile">
+    <a class="m-link" href="index.html">Home</a>
+    <a class="m-link" href="about.html">About</a>
+    <a class="m-link" href="classes.html">Classes</a>
+    <a class="m-link" href="pricing.html">Pricing</a>
+    <a class="m-link" href="contact.html">Contact</a>
+    <a href="register.html" class="btn btn-primary btn-lg">Register Now</a>
+  </div>
+
+  <main>
+    <section class="page-hero">
+      <div class="bg"><img src="assets/img/ropes.jpg" alt="" /></div>
+      <div class="container">
+        <div class="breadcrumb"><a href="index.html">Home</a> / Register</div>
+        <h1 class="display">Join the<br /><span class="neon">Core family.</span></h1>
+        <p class="lead" style="margin-top:24px">Two minutes to sign up. One coach waiting to welcome you. A whole community ready to cheer you on.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="form-shell">
+          <aside class="reveal">
+            <span class="eyebrow">What Happens Next</span>
+            <h2 class="h2">Your first day,<br /><span class="neon">sorted.</span></h2>
+            <div class="perks">
+              <div class="perk"><div class="icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg></div><div><b>We confirm on WhatsApp</b><p>Your details are sent straight to our team, who reply to confirm your start date.</p></div></div>
+              <div class="perk"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="7" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></div><div><b>Meet your guide</b><p>A coach gives you a tour, talks goals and shows you the equipment.</p></div></div>
+              <div class="perk"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div><div><b>Get your starter plan</b><p>Leave your first session with a programme built for you.</p></div></div>
+              <div class="perk"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 10h20"/></svg></div><div><b>Pay your way</b><p>Cash, Airtel Money, TNM Mpamba or bank transfer at the front desk.</p></div></div>
+            </div>
+          </aside>
+
+          <div class="form-card reveal d1">
+            <form id="register-form" novalidate>
+              <h3 class="h3" style="margin-bottom:24px">1. Choose your plan</h3>
+              <div class="plan-picker" role="radiogroup" aria-label="Membership plan">
+                <label class="plan-option"><input type="radio" name="plan" value="day-pass" /><span class="po"><b>Day Pass</b><small>MWK 5,000 / visit</small></span></label>
+                <label class="plan-option"><input type="radio" name="plan" value="core" /><span class="po"><b>Core</b><small>MWK 40,000 / month</small></span></label>
+                <label class="plan-option"><input type="radio" name="plan" value="core-plus" checked /><span class="po"><b>Core Plus ★</b><small>MWK 60,000 / month</small></span></label>
+                <label class="plan-option"><input type="radio" name="plan" value="womens-studio" /><span class="po"><b>Women's Studio</b><small>MWK 65,000 / month</small></span></label>
+              </div>
+
+              <h3 class="h3" style="margin:40px 0 24px">2. About you</h3>
+              <div class="form-grid">
+                <div class="field"><label for="first">First name *</label><input id="first" name="first" type="text" autocomplete="given-name" required /><span class="err">Please enter your first name</span></div>
+                <div class="field"><label for="last">Last name *</label><input id="last" name="last" type="text" autocomplete="family-name" required /><span class="err">Please enter your last name</span></div>
+                <div class="field"><label for="phone">Phone / WhatsApp *</label><input id="phone" name="phone" type="tel" placeholder="+265 ..." autocomplete="tel" required /><span class="err">Please enter a valid phone number</span></div>
+                <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" /><span class="err">Please enter a valid email</span></div>
+                <div class="field"><label for="gender">Gender *</label>
+                  <select id="gender" name="gender" required>
+                    <option value="">Select…</option><option>Female</option><option>Male</option><option>Prefer not to say</option>
+                  </select><span class="err">Please select an option</span></div>
+                <div class="field"><label for="start">Preferred start date</label><input id="start" name="start" type="date" /></div>
+                <div class="field full"><label for="goal">Main goal *</label>
+                  <select id="goal" name="goal" required>
+                    <option value="">Select your goal…</option>
+                    <option>Lose weight</option><option>Build muscle &amp; strength</option><option>Get fit &amp; healthy</option><option>Learn boxing / self-defence</option><option>Flexibility &amp; mobility</option><option>Mental health &amp; stress relief</option>
+                  </select><span class="err">Please choose a goal</span></div>
+                <div class="field full"><label>I'm interested in</label>
+                  <div class="checks">
+                    <label class="check"><input type="checkbox" name="interests" value="Strength" /><span>Strength</span></label>
+                    <label class="check"><input type="checkbox" name="interests" value="Boxing" /><span>Boxing</span></label>
+                    <label class="check"><input type="checkbox" name="interests" value="Karate" /><span>Karate</span></label>
+                    <label class="check"><input type="checkbox" name="interests" value="Yoga" /><span>Yoga</span></label>
+                    <label class="check"><input type="checkbox" name="interests" value="Abs & Core" /><span>Abs &amp; Core</span></label>
+                    <label class="check"><input type="checkbox" name="interests" value="Personal Training" /><span>Personal Training</span></label>
+                  </div>
+                </div>
+                <div class="field full"><label for="notes">Injuries or anything we should know?</label><textarea id="notes" name="notes" placeholder="Optional"></textarea></div>
+                <div class="field full"><label class="consent"><input type="checkbox" name="consent" required /> I confirm I'm fit to exercise or will discuss any health conditions with my coach.</label><span class="err">Please tick to continue</span></div>
+              </div>
+              <button type="submit" class="btn btn-primary btn-lg btn-block" style="margin-top:30px">Register Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+              <p class="muted" style="font-size:13px;text-align:center;margin:14px 0 0">Submitting opens WhatsApp with your details ready to send.</p>
+            </form>
+
+            <div class="form-success" role="status">
+              <div class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg></div>
+              <h3 class="h2">Welcome, <span id="success-name" class="neon"></span>!</h3>
+              <p class="lead" style="margin:16px auto 28px">Your registration is ready. Hit send in WhatsApp and our team will confirm your first session. If WhatsApp didn't open, use the button below.</p>
+              <a id="wa-confirm" href="#" target="_blank" rel="noopener" class="btn btn-primary">Send on WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="Core Fitness" width="367" height="294" />
+          <p>More than a place to lift weights. A community in Sector 5, Lilongwe, where everyone belongs, is guided and grows in body and mind.</p>
+          <div class="socials">
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+            <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c.3 2.3 1.7 3.8 4 4v3c-1.5 0-2.8-.4-4-1.2V15a6 6 0 1 1-6-6v3.2a2.8 2.8 0 1 0 2.8 2.8V3H16z"/></svg></a>
+            <a href="#" data-wa aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.6 11.6 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="about.html">About &amp; History</a></li>
+            <li><a href="classes.html">Classes &amp; Timetable</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="register.html">Register Now</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Train</h4>
+          <ul>
+            <li><a href="classes.html#strength">Strength</a></li>
+            <li><a href="classes.html#boxing">Boxing</a></li>
+            <li><a href="classes.html#karate">Karate</a></li>
+            <li><a href="classes.html#yoga">Yoga &amp; Flexibility</a></li>
+            <li><a href="classes.html#abs">Abs &amp; Core</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Visit</h4>
+          <ul>
+            <li>Sector 5, Lilongwe, Malawi</li>
+            <li>Mon–Fri · 05:00–21:00</li>
+            <li>Sat · 06:00–18:00</li>
+            <li>Sun · 07:00–13:00</li>
+            <li><a href="https://maps.app.goo.gl/kBZZqsouo9vo6uV37" target="_blank" rel="noopener">Open in Google Maps →</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year></span> Core Fitness Lilongwe. All rights reserved.</span>
+        <span>Body · Mind · Community</span>
+      </div>
+      <div class="footer-giant" aria-hidden="true">CORE FITNESS</div>
+    </div>
+  </footer>
+
+  <a href="#" data-wa class="wa-float" aria-label="Chat with us on WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.6 11.6 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.5-.3z"/></svg></a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

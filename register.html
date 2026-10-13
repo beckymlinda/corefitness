@@ -10,13 +10,21 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=Michroma&display=swap" rel="stylesheet" />
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem("core-theme"); } catch (e) {}
+      if (t !== "light" && t !== "dark") t = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <!-- ============ HEADER ============ -->
   <header class="site-header">
     <div class="container">
-      <a href="index.html" class="brand" aria-label="Core Fitness home"><img src="assets/logo.png" alt="Core Fitness" width="367" height="294" /></a>
+      <a href="index.html" class="brand" aria-label="Core Fitness home"><img class="logo-dark" src="assets/logo.png" alt="Core Fitness" width="367" height="294" /><img class="logo-light" src="assets/logo-light.png" alt="" aria-hidden="true" width="367" height="294" /></a>
       <nav class="nav" aria-label="Main">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -26,6 +34,10 @@
       </nav>
       <div class="header-cta">
         <a href="pricing.html" class="btn btn-ghost">View Plans</a>
+        <button class="theme-toggle" type="button" aria-label="Switch to light mode">
+          <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
         <a href="register.html" class="btn btn-primary">Register Now</a>
         <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
       </div>
@@ -124,7 +136,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="assets/logo.png" alt="Core Fitness" width="367" height="294" />
+          <img class="logo-dark" src="assets/logo.png" alt="Core Fitness" width="367" height="294" /><img class="logo-light" src="assets/logo-light.png" alt="" aria-hidden="true" width="367" height="294" />
           <p>More than a place to lift weights. A community in Sector 5, Lilongwe, where everyone belongs, is guided and grows in body and mind.</p>
           <div class="socials">
             <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8z"/></svg></a>

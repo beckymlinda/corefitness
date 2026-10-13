@@ -11,6 +11,38 @@ const CORE = {
 document.addEventListener("DOMContentLoaded", () => {
   const body = document.body;
 
+  /* Light / dark theme (initial value is set by the inline script in <head>) */
+  const root = document.documentElement;
+  const themeMeta = document.querySelector('meta[name="theme-color"]');
+  const syncTheme = () => {
+    const light = root.dataset.theme === "light";
+    if (themeMeta) themeMeta.content = light ? "#f7f4f0" : "#070707";
+    document.querySelectorAll(".theme-toggle").forEach((b) => {
+      b.setAttribute("aria-label", light ? "Switch to dark mode" : "Switch to light mode");
+      b.setAttribute("aria-pressed", light);
+    });
+  };
+  const setTheme = (theme, save) => {
+    root.classList.add("theme-anim");
+    root.dataset.theme = theme;
+    if (save) {
+      try { localStorage.setItem("core-theme", theme); } catch (e) {}
+    }
+    syncTheme();
+    setTimeout(() => root.classList.remove("theme-anim"), 400);
+  };
+  syncTheme();
+  document.querySelectorAll(".theme-toggle").forEach((b) =>
+    b.addEventListener("click", () => setTheme(root.dataset.theme === "light" ? "dark" : "light", true))
+  );
+  // follow the device setting until the visitor picks a theme themselves
+  const mq = window.matchMedia("(prefers-color-scheme: light)");
+  mq.addEventListener?.("change", (e) => {
+    let saved = null;
+    try { saved = localStorage.getItem("core-theme"); } catch (err) {}
+    if (!saved) setTheme(e.matches ? "light" : "dark", false);
+  });
+
   /* Header state on scroll */
   const header = document.querySelector(".site-header");
   const onScroll = () => header && header.classList.toggle("scrolled", window.scrollY > 30);
